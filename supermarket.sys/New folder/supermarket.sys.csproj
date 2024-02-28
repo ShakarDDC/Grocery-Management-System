@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0DCEC66E-7394-433B-8E79-03C0DE9EDF62}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>supermarket.sys</RootNamespace>
+    <AssemblyName>supermarket.sys</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Basarchu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basarchu.Designer.cs">
+      <DependentUpon>Basarchu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="company.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company.Designer.cs">
+      <DependentUpon>company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport_inventory.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport_inventory.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="daxllkrdn_tomarkrdn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="daxllkrdn_tomarkrdn.Designer.cs">
+      <DependentUpon>daxllkrdn_tomarkrdn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmadmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmadmin.Designer.cs">
+      <DependentUpon>frmadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmuser.Designer.cs">
+      <DependentUpon>frmuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="froshraw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="froshraw.Designer.cs">
+      <DependentUpon>froshraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="froshtn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="froshtn.Designer.cs">
+      <DependentUpon>froshtn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gorankary_tomarkrdn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gorankary_tomarkrdn.Designer.cs">
+      <DependentUpon>gorankary_tomarkrdn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jore_kalla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jore_kalla.Designer.cs">
+      <DependentUpon>jore_kalla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kallay_kambu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kallay_kambu.Designer.cs">
+      <DependentUpon>kallay_kambu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginform.Designer.cs">
+      <DependentUpon>loginform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Namaw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Namaw.Designer.cs">
+      <DependentUpon>Namaw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nrxe_Dollar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nrxe_Dollar.Designer.cs">
+      <DependentUpon>Nrxe_Dollar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_froshraw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_froshraw.Designer.cs">
+      <DependentUpon>print_froshraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_inventory.Designer.cs">
+      <DependentUpon>print_inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tomarkrdn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tomarkrdn.Designer.cs">
+      <DependentUpon>tomarkrdn.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Basarchu.resx">
+      <DependentUpon>Basarchu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company.resx">
+      <DependentUpon>company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport_inventory.resx">
+      <DependentUpon>CrystalReport_inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport_inventory.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport_inventory.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="daxllkrdn_tomarkrdn.resx">
+      <DependentUpon>daxllkrdn_tomarkrdn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmadmin.resx">
+      <DependentUpon>frmadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmuser.resx">
+      <DependentUpon>frmuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="froshraw.resx">
+      <DependentUpon>froshraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="froshtn.resx">
+      <DependentUpon>froshtn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gorankary_tomarkrdn.resx">
+      <DependentUpon>gorankary_tomarkrdn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jore_kalla.resx">
+      <DependentUpon>jore_kalla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kallay_kambu.resx">
+      <DependentUpon>kallay_kambu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginform.resx">
+      <DependentUpon>loginform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Namaw.resx">
+      <DependentUpon>Namaw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nrxe_Dollar.resx">
+      <DependentUpon>Nrxe_Dollar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_froshraw.resx">
+      <DependentUpon>print_froshraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_inventory.resx">
+      <DependentUpon>print_inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="tomarkrdn.resx">
+      <DependentUpon>tomarkrdn.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\available_updates_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_33px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\broom_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\broom_30px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
